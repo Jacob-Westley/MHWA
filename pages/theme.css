@@ -69,8 +69,8 @@ p {
     margin-left: 45%;
     border: solid blue;
 }
-}
-/*
+
+
 input[type=submit] {
     background-color: blue;
     color: white;
@@ -93,9 +93,9 @@ input[type=submit1] {
     cursor: pointer;
     margin-left: 45%;
     border: solid blue;
-    /* float: left; 
+     float: left; 
 }
-*/
+
 input[type=submit]:hover {
     background-color: #ffffff;
     color: blue;
