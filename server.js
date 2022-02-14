@@ -21,6 +21,13 @@ app.get("/createAccount", function(req, res) {
 });
 
 
+app.get("/feeling", function(req, res) {
+
+    res.sendFile("feeling.html", {root: path.join(__dirname, "./pages")});
+    app.use(express.static(__dirname + '/pages'));
+});
+
+
 
 app.post("/createAccount", function(req, res) {
 

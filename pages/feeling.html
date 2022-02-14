@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+    <html>
+        <title> How are you feeling? - M H W A</title>
+        <link rel = "stylesheet" href = "theme.css">
+    </html>
+    <body>
+        <!-- Navbar -->
+        <div class = "header">
+        </div>
+        <div class = "main">
+
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                <p>Value: <span id="demo"></span></p>
+              </div>
+
+            <div class = "face">
+                <!-- Smiley face goes here -->
+            </div>
+
+            <div class = "slider">
+                <!-- Slider Goes Here -->
+            </div>
+
+            <div class = "feelingText">
+                <!-- Input box goes here -->
+            </div>
+
+            <div class = "inputButtons">
+                <!-- Input buttons go here -->
+            </div>
+
+        </div>
+        
+    </body>
+
+    <script>
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value;
+        
+        slider.oninput = function() {
+          output.innerHTML = this.value;
+        }
+        </script>
+
+        </html>
