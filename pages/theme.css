@@ -41,6 +41,11 @@ p {
     text-align: center;
 }
 
+.face {
+    width: 5%;
+    margin-left: 40%;
+}
+
  input[type=text], select {
     width: 60%;
     padding: 12px 20px;
@@ -75,6 +80,33 @@ p {
     border: solid blue;
 }
 
+.saveBtn {
+    background-color: blue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 45%;
+    border: solid blue;
+}
+
+.minus {
+    width: 5%;
+    float: left;
+    text-align: left;
+
+}
+
+.plus {
+    width: 5%;
+    margin-left: 90%;
+    float: left;
+    text-align: right;
+    
+}
+
 
 input[type=submit] {
     background-color: blue;
@@ -98,7 +130,7 @@ input[type=submit1] {
     cursor: pointer;
     margin-left: 45%;
     border: solid blue;
-     float: left; 
+    float: left; 
 }
 
 input[type=submit]:hover {
@@ -118,12 +150,8 @@ input[type=submit1]:hover {
 } 
 
 
-/* .slidecontainer {
-  width: 100%;
-} */
-
 .slider {
-  /* -webkit-appearance: none; */
+  -webkit-appearance: none; 
   width: 100%;
   height: 15px;
   border-radius: 5px;
@@ -144,7 +172,7 @@ input[type=submit1]:hover {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: #04AA6D;
+  background: blue;
   cursor: pointer;
 }
 
@@ -152,6 +180,17 @@ input[type=submit1]:hover {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: #04AA6D;
+  background: blue;
   cursor: pointer;
 } 
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+
+    .face {
+        width: 10%;
+        margin-left: 20%;
+    }
+  }

@@ -11,23 +11,31 @@
 
         <div class = "main">
 
-            
-
             <div class = "face">
                 <img src = "smileyFaces/smileyFace3.png">
             </div>
 
             <div class="slidecontainer">
+
+                <div class = "minus">
+                    <p>-</p>
+                </div>
+
+                <div class = "plus">
+                    <p>+</p>
+                </div>
                 <input type="range" min="1" max="5" value="3" class="slider" id="myRange">
                 <p>Value: <span id="demo"></span></p>
             </div>
 
             <div class = "feelingText">
-                <!-- Input box goes here -->
+                <p> How are you feeling? </p>
+                <input type="text" id="feelingIn" name="feelingInput" placeholder="Today I am feeling...">
             </div>
 
             <div class = "inputButtons">
-                <!-- Input buttons go here -->
+                <button id = "saveBtn">Save</button>
+                <button id = "skipBtn">Skip</button>
             </div>
 
         </div>
