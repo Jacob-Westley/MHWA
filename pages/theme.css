@@ -149,7 +149,6 @@ input[type=submit1]:hover {
     
 } 
 
-
 .slider {
   -webkit-appearance: none; 
   width: 100%;
@@ -183,6 +182,34 @@ input[type=submit1]:hover {
   background: blue;
   cursor: pointer;
 } 
+
+
+.feelingHeaderDiv {
+    width: 70%;
+    text-align: right;
+}
+
+.activities {
+    color: white;
+    background-color: blue;
+
+}
+
+.externalHelp {
+
+    color: white;
+    background-color: blue;
+}
+
+.feelingMessage {
+    color: white;
+    background-color: blue;
+    width: 70%;
+}
+
+.faceClass {
+    float: right;
+}
 
 @media only screen and (max-width: 600px) {
     body {

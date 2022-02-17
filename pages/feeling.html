@@ -24,8 +24,9 @@
                 <div class = "plus">
                     <p>+</p>
                 </div>
-                <input type="range" min="1" max="5" value="3" class="slider" id="myRange">
-                <p>Value: <span id="demo"></span></p>
+                <input type="range" min="1" max="5" value="3" class="slider" id="feelingRange">
+                <p>Value: <span id="valueOut"></span></p>
+                <p id="feelingOut"></p>
             </div>
 
             <div class = "feelingText">
@@ -42,14 +43,6 @@
         
     </body>
 
-    <script>
-        var slider = document.getElementById("myRange");
-        var output = document.getElementById("demo");
-        output.innerHTML = slider.value;
-        
-        slider.oninput = function() {
-          output.innerHTML = this.value;
-        }
-        </script>
+    <script src = "script.js"></script>
 
         </html>
