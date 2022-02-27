@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title> Login - M H W A </title>
+            <link rel = "stylesheet" href = "theme.css">
+            <meta name = "viewport" content = "width=device-width, initial-scale=1.0">            
+        </head>
+        <body>
+            
+            <div class = "header">
+                <h1> M H W A </h1>
+            </div>   
+
+            <!-- Body of page in a div -->
+            <div class = "main">
+                <div class = "startParagraph">
+                    <div class = "loginParagraph">
+                        <p> Welcome to the Mental Health Web App </p>                        
+                    </div>
+                </div>
+
+                <div class = "main">
+
+                    <div class = "face">
+                        <img src = "smileyFaces/smileyFace3.png">
+                    </div>
+        
+                    <div class = "slidecontainer">
+        
+                        <div class = "minus">
+                            <p>-</p>
+                        </div>
+        
+                        <div class = "plus">
+                            <p>+</p>
+                        </div>
+                        <input type = "range" min = "1" max = "5" value = "3" class = "slider" id = "feelingRange">
+                        <p>Value: <span id = "valueOut"></span></p>
+                        <p id = "feelingOut"></p>
+                    </div>
+        
+                    <div class = "feelingText">
+                        <p> How are you feeling? </p>
+                    </div>
+
+                    <div class = "continue">               
+                        <button id = "continue">Start</button>  
+                    </div>
+
+            </div>
+
+            <div class = "footer">
+
+                    <div class = "aboutButton">
+
+                        <button class = "aboutBtn">About</button>
+
+                    </div>
+               
+            </div>
+        </body>
+        <script src = "script.js"></script>
+    </html>
