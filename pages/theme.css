@@ -5,19 +5,21 @@ p {
 .main {
     width: 50%;
     margin-left: 25%;
+    border-radius: 10px;
 }
 
-.button1 {
+/* .button1 {
     padding: 100px 204px;
-}
+} */
 
 .header {
     background-color: blue;
     color: white;
     text-align: center;
+    border-radius: 10px;
 }
 
-.loginParagraph {
+/* .loginParagraph {
     text-align: center;
 }
 
@@ -29,7 +31,7 @@ p {
 .signUpDiv {
     width: 80%;
     margin-left: 10%;
-}
+} */
 
 .footer {
     position: fixed;
@@ -39,6 +41,7 @@ p {
     background-color: #EBEBEB;
     color: white;
     text-align: center;
+    border-radius: 10px;
 }
 
 .face {
@@ -46,7 +49,7 @@ p {
     margin-left: 40%;
 }
 
- input[type=text], select {
+ /* input[type=text], select {
     width: 60%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -54,9 +57,9 @@ p {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-}
+} */
 
-.button1 {
+/* .button1 {
     background-color: blue;
     color: white;
     padding: 14px 20px;
@@ -66,9 +69,9 @@ p {
     cursor: pointer;
     margin-left: 45%;
     border: solid blue;
-}
+} */
 
-.footerButtons {
+/* .footerButtons {
     background-color: blue;
     color: white;
     padding: 14px 20px;
@@ -78,9 +81,9 @@ p {
     cursor: pointer;
     margin-left: 45%;
     border: solid blue;
-}
+} */
 
-.saveBtn {
+/* .saveBtn {
     background-color: blue;
     color: white;
     padding: 14px 20px;
@@ -90,7 +93,7 @@ p {
     cursor: pointer;
     margin-left: 45%;
     border: solid blue;
-}
+} */
 
 .minus {
     width: 5%;
@@ -108,7 +111,7 @@ p {
 }
 
 
-input[type=submit] {
+button {
     background-color: blue;
     color: white;
     padding: 14px 20px;
@@ -119,7 +122,7 @@ input[type=submit] {
     margin-left: 45%;
     border: solid blue;
 }
-
+/* 
 input[type=submit1] {
     background-color: blue;
     color: white;
@@ -131,23 +134,15 @@ input[type=submit1] {
     margin-left: 45%;
     border: solid blue;
     float: left; 
-}
+} */
 
-input[type=submit]:hover {
+button:hover {
     background-color: #ffffff;
     color: blue;
     border-color: blue;
     border: solid blue;
     
 }
-
-input[type=submit1]:hover {
-    background-color: #ffffff;
-    color: blue;
-    border-color: blue;
-    border: solid blue;
-    
-} 
 
 .slider {
   -webkit-appearance: none; 
@@ -192,13 +187,32 @@ input[type=submit1]:hover {
 .activities {
     color: white;
     background-color: blue;
+    border-radius: 10px;
+    padding-left: 4%;
+    padding-top: 1px;
+    padding-right: 4%;
+    padding-bottom: 1px;
+}
 
+.about {
+    /* color: white; */
+    background-color: #d3d3d3;
+    border-radius: 10px;
+    padding-left: 4%;
+    padding-top: 1px;
+    padding-right: 4%;
+    padding-bottom: 1px;
 }
 
 .externalHelp {
-
+    margin-top: 2%;
     color: white;
     background-color: blue;
+    border-radius: 10px;
+    padding-left: 4%;
+    padding-top: 1px;
+    padding-right: 4%;
+    padding-bottom: 1px;
 }
 
 .feelingMessage {
@@ -209,10 +223,12 @@ input[type=submit1]:hover {
 
 
 .option1 {
-    background-color: aqua;
+    background-color: #d3d3d3;
     width: 20%;
     height: 20%;
     margin-left: 2%;
+    border-radius: 10px;
+    padding: 1%;
 }
 
 .option2 {
@@ -220,6 +236,7 @@ input[type=submit1]:hover {
     width: 20%;
     height: 20%;
     margin-left: 2%;
+    border-radius: 10px;
 }
 
 .option3 {
@@ -227,6 +244,7 @@ input[type=submit1]:hover {
     width: 20%;
     height: 20%;
     margin-left: 2%;
+    border-radius: 10px;
 }
 
 .faceClass {
@@ -234,9 +252,9 @@ input[type=submit1]:hover {
 }
 
 @media only screen and (max-width: 1080px) {
-    body {
+    /* body {
       background-color: lightblue;
-    }
+    } */
 
     .face {
         width: 10%;

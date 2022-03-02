@@ -11,19 +11,25 @@ const port = 9000;
         app.use(express.static(__dirname + '/pages'));
     });
 
+    app.get("/about", function(req, res) {
 
-    app.get("/signup", function(req, res) {
-
-        res.sendFile("signup.html", {root: path.join(__dirname, "./pages")});
+        res.sendFile("about.html", {root: path.join(__dirname, "./pages")});
         app.use(express.static(__dirname + '/pages'));
     });
 
 
-    app.get("/feeling", function(req, res) {
+    // app.get("/signup", function(req, res) {
 
-        res.sendFile("feeling.html", {root: path.join(__dirname, "./pages")});
-        app.use(express.static(__dirname + '/pages'));
-    });
+    //     res.sendFile("signup.html", {root: path.join(__dirname, "./pages")});
+    //     app.use(express.static(__dirname + '/pages'));
+    // });
+
+
+    // app.get("/feeling", function(req, res) {
+
+    //     res.sendFile("feeling.html", {root: path.join(__dirname, "./pages")});
+    //     app.use(express.static(__dirname + '/pages'));
+    // });
 
 
     app.get("/home", function(req, res) {
