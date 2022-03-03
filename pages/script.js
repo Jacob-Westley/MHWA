@@ -8,7 +8,7 @@ document.getElementById("startButton").addEventListener("click", startFunction);
 
   }
 
-document.getElementById("about").addEventListener("click", aboutFunction);
+document.getElementById("aboutButton").addEventListener("click", aboutFunction);
 
   function aboutFunction() {
 
@@ -16,38 +16,15 @@ document.getElementById("about").addEventListener("click", aboutFunction);
 
   }
 
-
-
-
-
   
-let slider = document.getElementById("feelingRange");
-let output = document.getElementById("valueOut");
-let feelingVal = document.getElementById("feelingOut");
+// let slider = document.getElementById("feelingRange");
+// let output = document.getElementById("valueOut");
+// let feelingVal = document.getElementById("feelingOut");
 
-// while (this.value = 1) {
-//     feelingVal.innerHTML = "Terrible";
-// } 
 
-// while (this.value = 2) {
-//     feelingVal.innerHTML = "Sad";
-// } 
+// output.innerHTML = slider.value;
 
-// while (this.value = 3) {
-//     feelingVal.innerHTML = "Fine";
+// slider.oninput = function() {
+//   output.innerHTML = this.value;
 // }
-
-// while (this.value = 4) {
-//     feelingVal.innerHTML = "Good";
-// }
-
-// while (this.value = 5) {
-//     feelingVal.innerHTML = "Amazing";
-// }
-
-output.innerHTML = slider.value;
-
-slider.oninput = function() {
-  output.innerHTML = this.value;
-}
 
