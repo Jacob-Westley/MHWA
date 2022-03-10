@@ -1,30 +1,20 @@
-
-
 document.getElementById("startButton").addEventListener("click", startFunction);
 
-  function startFunction() {
-
-    location.href = "http://localhost:9000/home";
-
-  }
+    function startFunction() { location.href = "http://localhost:9000/home"; }
 
 document.getElementById("aboutButton").addEventListener("click", aboutFunction);
 
-  function aboutFunction() {
+    function aboutFunction() { location.href = "http://localhost:9000/about"; }
 
-    location.href = "http://localhost:9000/about";
+document.getElementById("breathingButton").addEventListener("click", breathingFunction);
 
-  }
+    function breathingFunction() { location.href = "http://localhost:9000/breathing"; }
 
-  
-// let slider = document.getElementById("feelingRange");
-// let output = document.getElementById("valueOut");
-// let feelingVal = document.getElementById("feelingOut");
+document.getElementById("nhsButton").addEventListener("click", nhsFunction);
 
+    function nhsFunction() { location.href = "https://www.nhs.uk/mental-health/"; }
 
-// output.innerHTML = slider.value;
+document.getElementById("mindButton").addEventListener("click", mindFunction);
 
-// slider.oninput = function() {
-//   output.innerHTML = this.value;
-// }
+    function mindFunction() { location.href = "https://www.nhs.uk/mental-health/"; }
 
