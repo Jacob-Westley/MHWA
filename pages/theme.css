@@ -153,21 +153,23 @@ button:hover {
 }
 
 .option2 {
-    background-color: aqua;
+    background-color: #d3d3d3;
     width: 20%;
     height: 20%;
     margin-left: 2%;
     border-radius: 10px;
+    padding: 1%;
     display: inline-block;
     color: black;
 }
 
 .option3 {
-    background-color: aqua;
+    background-color: #d3d3d3;
     width: 20%;
     height: 20%;
     margin-left: 2%;
     border-radius: 10px;
+    padding: 1%;
     display: inline-block;
     color: black;
 }
