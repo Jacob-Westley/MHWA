@@ -1,44 +1,38 @@
 <!DOCTYPE html>
     <html>
         <head>
-            <title> Start - M H W A </title>
+            <title> Home - M H W A </title> 
             <link rel = "stylesheet" href = "theme.css">
-            <meta name = "viewport" content = "width=device-width, initial-scale=1.0">            
+            <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
         </head>
         <body>
+
             <div class = "header">
-                <h1> M H W A </h1>
-            </div>   
+                <p> M H W A </p>                
+            </div>
+
             <div class = "main">
-                <div class = "startParagraph">                    
-                    <p> Welcome to the Mental Health Web App </p>             
-                </div>
-                <div class = "face">
-                    <img src = "smileyFaces/smileyFace3.png">
-                </div>
-                <div class = "slidecontainer">
-                    <div class = "minus">
-                        <p> - </p>
+                <div class = "activities">
+                    <h1> Login: </h1>
+                    <p> Login to the Mental Health Web App to access helpful activities and advice. </p>
+                    <div class = "login">
+                        <p id = "username"> Username: </p>
+                        <input id = "usernameInput" placeholder = "person@example.net"></input>
+                        <p id = "password"> Pasword: </p>
+                        <input id = "passwordInput" placeholder = "********"></input>
+                        
                     </div>
-                    <div class = "plus">
-                        <p> + </p>
-                    </div>    
-                    <input type = "range" min = "1" max = "5" value = "3" class = "slider" id = "feelingRange">
-                    <p> Value: <span id = "valueOut"></span></p>
-                    <p id = "feelingOut"></p>
-                </div>
-                <div class = "feelingText">
-                    <p> How are you feeling? </p>
-                </div>
-                <div class = "start">               
-                    <button id = "startButton"> Start </button>  
+
+                    <div class = "loginbutton">
+                        <button id = "login"> Login </button>
+                    </div>
                 </div>
             </div>
             <div class = "footer">
-                <div class = "about">
-                    <button id = "aboutButton"> About </button>  
+                <div class = "about">                    
+                    <button id = "aboutButton" onclick = 'location.href = "http://localhost:9000/about"' >About</button>
                 </div>
             </div>
         </body>
-        <script src = "script.js"></script>
+        <!-- <script src = "script.js"></script> -->
     </html>
