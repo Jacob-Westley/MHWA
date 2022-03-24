@@ -29,6 +29,31 @@ const port = 9000;
         app.use(express.static(__dirname + '/pages'));
     });
 
+    app.get("/mindfulness", function(req, res) {
+
+        res.sendFile("minfulness.html", {root: path.join(__dirname, "./pages")});
+        app.use(express.static(__dirname + '/pages'));
+    });
+
+    app.get("/diarycreation", function(req, res) {
+
+        res.sendFile("diarycreation.html", {root: path.join(__dirname, "./pages")});
+        app.use(express.static(__dirname + '/pages'));
+    });
+
+    app.get("/diaryview", function(req, res) {
+
+        res.sendFile("diaryview.html", {root: path.join(__dirname, "./pages")});
+        app.use(express.static(__dirname + '/pages'));
+    });
+
+    app.post("/", function(req, res) {
+
+        let directoryIn = req.body.directoryIn;
+        console.log(directoryIn);
+      
+    });
+
 
 app.listen(port, function() {
     console.log("Listening on port " + port);

@@ -7,7 +7,7 @@
         </head>
         <body>
 
-            <div class = "header">
+            <div class = "header" onclick = "homeFunction()">
                 <p> M H W A </p>                
             </div>
 
@@ -19,11 +19,17 @@
 
                     <div class = "option1">
                         <p> Breathing Exercises </p>
-                        <button id = "breathingButton"> Go </button>
+                        <button id = "breathingButton" onclick = "breathingFunction()"> Go </button>
                     </div>
 
                     <div class = "option2">
                         <p> Minfulness </p>
+                        <button id = "mindfulnessButton" onclick = "mindfulnessFunction()"> Go </button>
+                    </div>
+
+                    <div class = "option3">
+                        <p> Diary </p>
+                        <button id = "diaryButton"> Go </button>
                     </div>
 
                 </div>
@@ -34,25 +40,58 @@
                     <p> These links will take you outside the Mental Health Web App and take you to the respective organisations page. </p>
 
                     <div class = "option1">                        
-                        <img src = "images/NHS.jpg">
+                        <!-- <img src = "images/NHS.jpg"> -->
                             <p> National Health Service </p>
-                        <button id = "nhsButton"> Go </button>
+                        <button id = "nhsButton" onclick = "nhsFunction()"> Go </button>
                     </div>
 
                     <div class = "option2">
-                        <img src = "images/mind.jpg">
+                        <!-- <img src = "images/mind.jpg"> -->
                             <p> Mind </p>
-                        <button id = "mindButton"> Go </button>
+                        <button id = "mindButton" onclick = "mindFunction()"> Go </button>
                     </div>
 
                     <div class = "option3">
-                        <img src = "images/samaritans.png">
+                        <!-- <img src = "images/samaritans.png"> -->
                         <p> Samaritans </p>
-
-                        <button id = "samaritansButton"> Go </button>
+                        <button id = "samaritansButton" onclick = "samaritansFunction()"> Go </button>
                     </div>
+
+                    <div class = "option4">
+                        <!-- <img src = "images/projectsemicolon.jpg"> -->
+                        <p> Porject Semicolon </p>
+                        <button id = "projectsemicolonButton" onclick = "projectsemicolonFunction()"> Go </button>
+                    </div>
+
                 </div>
             </div>
         </body>
-        <script src = "script.js"></script>
+        <script>
+
+            function projectsemicolonFunction() {
+                location.href = "https://projectsemicolon.com/";
+            }
+
+            function samaritansFunction() {
+                location.href = "https://www.samaritans.org/";
+            }
+
+            function nhsFunction() { 
+                location.href = "https://www.nhs.uk/mental-health/"; 
+            }
+
+            function mindFunction() { 
+                location.href = "https://www.mind.org.uk/"; 
+            }
+
+            function homeFunction() {
+                location.href = "http://localhost:9000/"
+            }
+
+            function breathingFunction() {
+                location.href = "http://localhost:9000/breathing";
+            }
+
+         
+        </script>
     </html>

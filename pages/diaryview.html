@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title> Diary - M H W A </title> 
+            <link rel = "stylesheet" href = "theme.css">
+            <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        </head>
+        <body>
+
+            <div class = "header" onclick = "homeFunction()">
+                <p> M H W A </p>                
+            </div>
+
+            <div class = "main">
+            
+                <div class = "diaryEntry">
+                    <h1> Diary Entry Example 1 </h1>
+                    <p>Date created: </p> 
+                    <p> Example of an entry into the diary feature. </p>
+                </div>
+
+                <div class = "diaryEntry">
+                    <h1> Diary Entry Example 2 </h1>
+                    <p> Example of an entry into the diary feature. </p>
+                </div>
+
+            </div>
+            <button id = "backbutton" onclick = "homeFunction()" > Back </button>
+        </body>
+        <script>
+
+            function homeFunction() {
+                location.href = "http://localhost:9000/home";
+            }
+     
+        </script>
+    </html>
