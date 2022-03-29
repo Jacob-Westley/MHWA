@@ -47,6 +47,12 @@ const port = 9000;
         app.use(express.static(__dirname + '/pages'));
     });
 
+    app.get("/signup", function(req, res) {
+
+        res.sendFile("signup3.html", {root: path.join(__dirname, "./pages")});
+        app.use(express.static(__dirname + '/pages'));
+    });
+
     app.post("/", function(req, res) {
 
         let directoryIn = req.body.directoryIn;

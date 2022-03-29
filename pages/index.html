@@ -1,14 +1,14 @@
 <!DOCTYPE html>
     <html>
         <head>
-            <title> Home - M H W A </title> 
+            <title> Home - Mental Health Web App </title> 
             <link rel = "stylesheet" href = "theme.css">
             <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
         </head>
         <body>
 
-            <div class = "header">
-                <p> Mental Health Web Application </p>                
+            <div class = "header" onclick = "homeFunction()">
+                <p> Mental Health Web App </p>                
             </div>
 
             <div class = "main">
@@ -20,22 +20,19 @@
                         <input id = "usernameInput" placeholder = "person@example.net"></input>
                         <p id = "password"> Pasword: </p>
                         <input id = "passwordInput" placeholder = "********"></input>
-                        
                     </div>
-
-
-                    
-
                     <div class = "loginbutton">
                         <button id = "login"> Login </button>
+                        <p> New to the Mental Health Web App? <a href = "http://localhost:9000/signup">Sign Up</a></p>
                     </div>
                 </div>
             </div>
+
             <div class = "footer">
                 <div class = "about">                    
-                    <button id = "aboutButton" onclick = 'location.href = "http://localhost:9000/about"' >About</button>
+                    <button id = "aboutButton" onclick = "aboutFunction()" >About</button>
                 </div>
             </div>
         </body>
-        <!-- <script src = "script.js"></script> -->
+        <script src = "script.js"> </script>
     </html>

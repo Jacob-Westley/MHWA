@@ -1,14 +1,14 @@
 <!DOCTYPE html>
     <html>
         <head>
-            <title> Sign Up - M H W A </title> 
+            <title> Sign Up - Mental Health Web App </title> 
             <link rel = "stylesheet" href = "theme.css">
             <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
         </head>
         <body>
 
-            <div class = "header">
-                <p> Mental Health Web Application </p>                
+            <div class = "header" onclick = "homeFunction()">
+                <p> Mental Health Web App </p>                
             </div>
 
             <div class = "main">
@@ -18,22 +18,24 @@
                     <div class = "login">
                         <form action="/createAccount" method="post">
 
-                            <p><strong>Username: </strong></p>    
+                            <p>Username: </p>    
                             <input type="text" name="userName" placeholder="Name">    
     
-                            <p><strong>Email: </strong></p>
+                            <p>Email: </p>
                             <input type="text" name="emailAddress" placeholder="Person@example.net">
     
-                            <p><strong>Password: </strong></p>
+                            <p>Password: </p>
                             <input type="text" name="passWord" placeholder="********">
     
-                            <p><strong>Confirm Password: </strong></p>
+                            <p>Confirm Password: </p>
                             <input type="text" name="confirmPassWord" placeholder="********">
     
                            
                             <div class = "loginbutton">
                                 <!-- <button id = "login"> Login </button> -->
                                 <input type="submit" value="Sign Up">  
+                                <p> Already a user of the Mental Health Web App? <a href = "http://localhost:9000">Log in</a></p>
+
                             </div>
     
                         </form>
@@ -49,10 +51,5 @@
                 </div>
             </div>
         </body>
-        <script>
-            function aboutFunction() {
-                location.href = "http://localhost:9000/about";
-            }
-
-        </script>
+        <script src = "script.js"> </script>
     </html>
