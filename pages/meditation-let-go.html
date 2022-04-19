@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title> Meditation - Mental Health Web App </title> 
+            <link rel = "stylesheet" href = "theme.css">
+            <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        </head>
+        <body>
+
+            <div class = "header" onclick = "homeFunction()">
+                <p> Mental Health Web App </p>                
+            </div>
+
+            <div class = "main">
+            
+                <div class = "activities">
+                    <h1> Meditation: </h1>
+                    <p> Use Meditations to calm down and relax. </p>
+                    <p> Daily Calm | 10 Minute Mindfulness Meditation | Letting Go </p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/syx3a1_LeFo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </body>
+        <script>
+            function homeFunction() {
+                location.href = "http://localhost:9000/"
+            }
+
+            function breathingFunction() {
+                location.href = "http://localhost:9000/breathing";
+            }
+   
+        </script>
+    </html>

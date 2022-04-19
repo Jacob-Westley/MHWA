@@ -18,6 +18,12 @@
                     <p> Find activities to reduce stress and help you cope with your feelings. </p>
 
                     <div class = "option">
+                        <p> Meditation </p>
+                        <button id = "meditationLetGoButton" onclick = "meditationLetGoFunction()"> Let Go </button>
+                        <button id = "meditationBePresentButton" onclick = "meditationBePresentButtonFunction()"> Be Present </button>
+                    </div>
+
+                    <div class = "option">
                         <p> Breathing Exercises </p>
                         <button id = "breathingButton" onclick = "breathingFunction()"> Go </button>
                     </div>
@@ -32,11 +38,7 @@
                         <button id = "diaryButton" onclick = "diaryFunction()"> Go </button>
                     </div>
 
-                    <div class = "option">
-                        <p> Meditation </p>
-                        <button id = "meditationButton" onclick = "meditationFunction()"> Go </button>
-                    </div>
-
+                    
                 </div>
 
                 <div class = "externalHelp">
@@ -57,7 +59,7 @@
                     <div class = "option">
                         <p> Samaritans </p>
                         <button id = "samaritansButton" onclick = "samaritansFunction()"> Go </button>
-                        <!-- <a href = "tel:116123" > 116 123 </a> -->
+                        <a href = "tel:116123" > 116 123 </a>
                     </div>
 
                     <div class = "option">
@@ -65,42 +67,12 @@
                         <button id = "projectsemicolonButton" onclick = "projectsemicolonFunction()"> Go </button>
                     </div>
 
+                    <div class = "option">
+                        <p> Trevor Project (LGBTQ+) </p>
+                        <button id = "trevorProjectButton" onclick = "trevorProjectFunction()"> Go </button>
+                    </div>
                 </div>
             </div>
         </body>
-        <script>
-
-            function projectsemicolonFunction() { 
-                location.href = "https://projectsemicolon.com/";
-            }
-
-            function samaritansFunction() {
-                location.href = "https://www.samaritans.org/";
-            }
-
-            function nhsFunction() { 
-                location.href = "https://www.nhs.uk/mental-health/"; 
-            }
-
-            function mindFunction() { 
-                location.href = "https://www.mind.org.uk/"; 
-            }
-
-            function homeFunction() {
-                location.href = "http://localhost:9000/"
-            }
-
-            function breathingFunction() {
-                location.href = "http://localhost:9000/breathing";
-            }
-
-            function diaryFunction() {
-                location.href = "http://localhost:9000/diary";
-            }
-
-            function diaryFunction() {
-                location.href = "http://localhost:9000/diary";
-            }
-            
-        </script>
+        <script src = "script.js"></script>
     </html>

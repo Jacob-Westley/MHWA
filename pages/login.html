@@ -16,15 +16,19 @@
                     <h1> Login: </h1>
                     <p> Login to the Mental Health Web App to access helpful activities and advice. </p>
                     <div class = "login">
-                        <p id = "username"> Username: </p>
-                        <input id = "usernameInput" placeholder = "person@example.net"></input>
-                        <p id = "password"> Pasword: </p>
-                        <input id = "passwordInput" placeholder = "********"></input>
-                    </div>
-                    <div class = "loginbutton">
-                        <button id = "login"> Login </button>
-                        <p> New to the Mental Health Web App? <a href = "http://localhost:9000/signup">Sign Up</a></p>
-                    </div>
+                        <h1> Login </h1>
+                        <form action = "/login" method = "post">
+                            <p id = "username"> Username: </p>
+                            <input type = "text" name = "username" placeholder = "Username" id = "username" required>
+                            <p id = "password"> Pasword: </p>
+                            <input type = "password" name = "password" placeholder = "Password" id = "password" required>
+
+                            <div class = "loginbutton">
+                                <input type = "submit" value = "Login">
+                                <p> New to the Mental Health Web App? <a href = "http://localhost:9000/signup">Sign Up</a></p>
+                            </div>
+                        </form>
+                    </div>  
                 </div>
             </div>
 

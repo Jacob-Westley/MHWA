@@ -82,8 +82,11 @@ button:hover {
     background-color: #ffffff;
     color: blue;
     border-color: blue;
-    border: solid blue;
-    
+    border: solid blue; 
+}
+
+.breathingText {
+    text-align: center;
 }
 
 .slider {
