@@ -54,7 +54,7 @@ button, input[type=submit] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-left: 45%;
+    /* margin-left: 45%; */
     border: solid blue;
 }
 
@@ -195,7 +195,7 @@ button:hover {
     width: 70%;
 }
 
-.option1 {
+.option {
     background-color: #d3d3d3;
     width: 20%;
     height: 20%;
@@ -204,39 +204,7 @@ button:hover {
     padding: 1%;
     display: inline-block;
     color: black;
-}
-
-.option2 {
-    background-color: #d3d3d3;
-    width: 20%;
-    height: 20%;
-    margin-left: 2%;
-    border-radius: 10px;
-    padding: 1%;
-    display: inline-block;
-    color: black;
-}
-
-.option3 {
-    background-color: #d3d3d3;
-    width: 20%;
-    height: 20%;
-    margin-left: 2%;
-    border-radius: 10px;
-    padding: 1%;
-    display: inline-block;
-    color: black;
-}
-
-.option4 {
-    background-color: #d3d3d3;
-    width: 20%;
-    height: 20%;
-    margin-left: 2%;
-    border-radius: 10px;
-    padding: 1%;
-    display: inline-block;
-    color: black;
+    margin-bottom: 2%;
 }
 
 img {
