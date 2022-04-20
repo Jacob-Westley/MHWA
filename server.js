@@ -123,5 +123,5 @@ const port = 9000;
 
     app.listen(port, function() {
         console.log("Listening on port " + port);
-        open("http://localhost:9000/signup");
+        open("http://localhost:9000/login");
     });
