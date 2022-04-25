@@ -26,11 +26,6 @@ const port = 9000;
         database : "mental-health-web-app"
     });
 
-    // app.get("/login", function(req, res) {
-    //     res.sendFile("index.html", {root: path.join(__dirname, "./pages")});
-    //     app.use(express.static(__dirname + '/pages'));
-    // });
-
     app.get("/about", function(req, res) {
         res.sendFile("about.html", {root: path.join(__dirname, "./pages")});
         app.use(express.static(__dirname + '/pages'));

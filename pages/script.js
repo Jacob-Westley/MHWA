@@ -2,8 +2,9 @@
     function loginFunction() { location.href = "http://localhost:9000/login"; }        
     function aboutFunction() { location.href = "http://localhost:9000/about"; }    
     function breathingFunction() { location.href = "http://localhost:9000/breathing"; }
-    function homeFunction() { location.href = "http://localhost:9000/home" } 
-    function diaryFunction() { location.href = "http://localhost:9000/diary"; }
+    function homeFunction() { location.href = "http://localhost:9000/home"; } 
+    function diaryviewFunction() { location.href = "http://localhost:9000/diaryview"; }
+    function diarycreationFunction() { location.href = "http://localhost:9000/diarycreation"; }
     function mindfulnessFunction() { location.href = "http://localhost:9000/mindfulness"; }
     function meditationLetGoFunction() { location.href = "http://localhost:9000/meditationletgo"; }
     function meditationBePresentFunction() { location.href = "http://localhost:9000/meditationbepresent"; }
@@ -13,6 +14,6 @@
     function samaritansFunction() { location.href = "https://www.samaritans.org/"; }
     function nhsFunction() { location.href = "https://www.nhs.uk/mental-health/"; }   
     function mindFunction() { location.href = "https://www.mind.org.uk/"; }
-    function trevorProjectFunction() { location.href = "https://www.thetrevorproject.org/" };
+    function trevorprojectFunction() { location.href = "https://www.thetrevorproject.org/" };
 
  
