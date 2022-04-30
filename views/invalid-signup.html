@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title> Sign Up - Mental Health Web App </title> 
+            
+            <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        </head>
+        <body>
+
+            <div class = "header" onclick = "homeFunction()">
+                <p> Mental Health Web App </p>                
+            </div>
+
+            <div class = "main">
+                <h1> Invalid Credentials </h1>
+                <div class = "activities">
+                    <h1> Sign Up: </h1>
+                    <p>Sign up for an account to access the Mental Health Web Application.</p>
+                    <div class = "login">
+                        <form action="/signup" method="post">
+
+                            <p>Username: </p>    
+                            <input type="text" name="username" placeholder="Name">    
+    
+                            <p>Email: </p>
+                            <input type="text" name="email" placeholder="Person@example.net">
+    
+                            <p>Password: </p>
+                            <input type="text" name="password" placeholder="********">
+                            
+                            <!-- <p>Confirm Password: </p>
+                            <input type="text" name="confirmPassWord" placeholder="********"> -->
+    
+                            <div class = "loginbutton">
+                                <!-- <button id = "login"> Login </button> -->
+                                <input type="submit" value="SignUp">  
+                                <p> Already a user of the Mental Health Web App? <a href = "http://localhost:9000/login"> Log in </a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class = "footer">
+                <div class = "about">                    
+                    <button id = "aboutButton" onclick = "aboutFunction()">About</button>
+                </div>
+            </div>
+        </body>
+        <link rel = "stylesheet" href = "theme.css">
+        <script src = "script.js"> </script>
+    </html>

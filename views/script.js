@@ -6,7 +6,7 @@
     function diaryviewFunction() { location.href = "http://localhost:9000/diaryview"; }
     function diarycreationFunction() { location.href = "http://localhost:9000/diarycreation"; }
     function mindfulnessFunction() { location.href = "http://localhost:9000/mindfulness"; }
-    function meditationLetGoFunction() { location.href = "http://localhost:9000/meditationletgo"; }
+    function meditationLetGoFunction() { location.href = "http://localhost:9000/meditation-let-go"; }
     function meditationBePresentFunction() { location.href = "http://localhost:9000/meditationbepresent"; }
 
     //External Links

@@ -2,8 +2,27 @@
   "dependencies": {
     "express": "^4.17.3",
     "express-session": "^1.17.2",
+    "forever": "^4.0.3",
     "mongoose": "^6.2.1",
     "mysql": "^2.18.1",
     "open": "^8.4.0"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "mhwa",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jacob-Westley/MHWA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jacob-Westley/MHWA/issues"
+  },
+  "homepage": "https://github.com/Jacob-Westley/MHWA#readme",
+  "description": ""
 }

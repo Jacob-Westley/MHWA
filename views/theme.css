@@ -208,6 +208,7 @@ button:hover {
     display: inline-block;
     color: black;
     margin-bottom: 2%;
+    text-align: center;
 }
 
 img {
