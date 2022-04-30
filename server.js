@@ -34,6 +34,12 @@ const port = 9000;
         database : "mental-health-web-app"
     });
 
+    //Initial Connection
+    app.get("/", function(req, res) {
+        console.log("New client connected");
+        res.redirect("/login");
+    });
+
     //Login
     app.get("/login", function(req, res) {
         res.render("login.html", {root: path.join(__dirname, "./views")});
@@ -87,7 +93,7 @@ const port = 9000;
         app.use(express.static(__dirname + '/views'));
     });
 
-    app.post("/signup", function(req, res, usernamex) {
+    app.post("/signup", function(req, res) {
 
         let username = req.body.username;
         let password = req.body.password;
@@ -95,61 +101,157 @@ const port = 9000;
 
         if (username && password && email) {
         
-            // mysqlServer.connect(function(err) {
-                // if (err) throw err;
-                // console.log("Connected!");
-                // let sql = "INSERT INTO usersdata (username, password, email) VALUES (" + "'" + username + "'" + "," + "'" + password + "'" + "," + "'" + email + "'" + ")";
                 mysqlServer.query("INSERT INTO usersdata (username, password, email) VALUES (" + "'" + username + "'" + "," + "'" + password + "'" + "," + "'" + email + "'" + ")", function (err, result) {
-                // if (err) throw err;
+                
                 console.log("New user created in database:");
                 console.log("username: " + username);
-                console.log("password: " + password);
                 console.log("email:" + email);
 
-                let usernamex = req.session.username;
+                // let usernamex = req.session.username;
+
+                req.session.loggedin = true;
+                req.session.username = username;
+                res.redirect('/home');
                     
                 });
-            // });
+   
         } else { 
             res.redirect('/invalid-signup');
         }
         });
 
-
+    //About
     app.get("/about", function(req, res) {
         res.render("about.html", {root: path.join(__dirname, "./views")});
         app.use(express.static(__dirname + '/views'));
     });
 
+    //Home
     app.get("/home", function(req, res) {
-        res.render("home.html", {usernamex: req.session.username});
-        app.use(express.static(__dirname + '/views'));
+
+        if (req.session.loggedin = true && req.session.username) {
+            res.render("home.html", {usernamex: req.session.username});
+            app.use(express.static(__dirname + '/views'));
+        } else {
+            res.redirect('/login');
+        }
+
     });
 
+    //Breathing Exercise
     app.get("/breathing", function(req, res) {
-        res.render("breathing.html", {usernamex: req.session.username});
-        app.use(express.static(__dirname + '/views'));
+
+        if (req.session.loggedin = true && req.session.username) {
+            res.render("breathing.html", {usernamex: req.session.username});
+            app.use(express.static(__dirname + '/views'));
+        } else {
+            res.redirect('/login');
+        }
+
     });
 
+    //Mindfulness
     app.get("/mindfulness", function(req, res) {
-        res.render("mindfulness.html", {usernamex: req.session.username});
+
+        if (req.session.loggedin = true && req.session.username) {
+            res.render("mindfulness.html", {usernamex: req.session.username});
         app.use(express.static(__dirname + '/views'));
+        } else {
+            res.redirect('/login');
+        }
+
     });
 
+    //Meditation Let Go
     app.get("/meditation-let-go", function(req, res) {
-        res.render("meditation-let-go.html", {usernamex: req.session.username});
-        app.use(express.static(__dirname + '/views'));
+
+        if (req.session.loggedin = true && req.session.username) {
+            res.render("meditation-let-go.html", {usernamex: req.session.username});
+            app.use(express.static(__dirname + '/views'));
+        } else {
+            res.redirect('/login');
+        }
+
     });
 
+    //Meditation Be Present
     app.get("/meditation-be-present", function(req, res) {
-        res.render("meditation-be-present.html", {usernamex: req.session.username});
+
+        if (req.session.loggedin = true && req.session.username) {
+            res.render("meditation-be-present.html", {usernamex: req.session.username});
         app.use(express.static(__dirname + '/views'));
+        } else {
+            res.redirect('/login');
+        }
+
     });
+
+    //Diary View
+    app.get("/diary-view", function(req, res) {
+
+        if (req.session.loggedin = true && req.session.username) {
+            res.render("diaryview.html", {usernamex: req.session.username});
+        app.use(express.static(__dirname + '/views'));
+        } else {
+            res.redirect('/login');
+        }
+    });
+
+    //Diary Creation
+    app.get("/diary-creation", function(req, res) {
+
+        if (req.session.loggedin = true && req.session.username) {
+            res.render("diarycreation3.html", {usernamex: req.session.username});
+        app.use(express.static(__dirname + '/views'));
+        } else {
+            res.redirect('/login');
+        }
+    });
+
+    //Diary
+    app.post("/diary-creation", function(req, res) {
+
+        let username = req.session.username;
+        let diaryentry = req.body.diaryentry;
+
+        if (diaryentry) {
+               
+                mysqlServer.query("INSERT INTO usersdiaries (username, diarytext) VALUES (" + "'" + username + "'" + "," + "'" + diaryentry + "'" + ")", function (err, result) {
+                
+                console.log(username + " created a new diary");
+                console.log(diaryentry);
+                res.send("Diary Entry Created Succesfully: " + diaryentry);
+                // res.send(diaryentry);
+                });
+   
+        } else { 
+            // res.redirect('/invalid-diary');
+            res.send("Diary not uploaded.");
+        }
+        });
+
+    //Logout
+    app.get("/logout", function(req, res) {
+        req.session.loggedin = false; 
+        console.log(req.session.username + " Logged out");     
+        res.redirect('/login');
+    });
+
+
+    //Logged in Test
+    app.get("/logged-in-test", function(req, res) {
+        
+        if (req.session.loggedin = true && req.session.username) {
+            res.send("Hi, " + req.session.username);
+        } else {
+            res.send("Not logged in");
+        }
+
+    });
+
     
-    
-    // module.exports = usernamex;
     //Listen on Port 9000
     app.listen(port, function() {
         console.log("Listening on port " + port);
-        open("http://localhost:9000/login");
+        open("http://localhost:9000/");
     });

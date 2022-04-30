@@ -7,7 +7,7 @@
     function diarycreationFunction() { location.href = "http://localhost:9000/diarycreation"; }
     function mindfulnessFunction() { location.href = "http://localhost:9000/mindfulness"; }
     function meditationLetGoFunction() { location.href = "http://localhost:9000/meditation-let-go"; }
-    function meditationBePresentFunction() { location.href = "http://localhost:9000/meditationbepresent"; }
+    function meditationBePresentFunction() { location.href = "http://localhost:9000/meditation-be-present"; }
 
     //External Links
     function projectsemicolonFunction() { location.href = "https://projectsemicolon.com/"; }
