@@ -106,11 +106,9 @@ const port = 9000;
                 console.log("New user created in database:");
                 console.log("username: " + username);
                 console.log("email:" + email);
-
-                // let usernamex = req.session.username;
-
                 req.session.loggedin = true;
                 req.session.username = username;
+                console.log(req.session.username + " Logged in.");
                 res.redirect('/home');
                     
                 });
@@ -245,6 +243,54 @@ const port = 9000;
             res.send("Hi, " + req.session.username);
         } else {
             res.send("Not logged in");
+        }
+
+    });
+
+    //Account Management
+    app.get("/account-management", function(req, res) {
+
+        if (req.session.loggedin = true && req.session.username) {
+            res.render("account-management.html", {usernamex: req.session.username});
+            app.use(express.static(__dirname + '/views'));
+        } else {
+            res.redirect('/login');
+        }
+
+    });
+
+    //Delete account
+    app.get("/account-management", function(req, res) {
+
+        if (req.session.loggedin = true && req.session.username) {
+            res.render("delete-account.html", {usernamex: req.session.username});
+            app.use(express.static(__dirname + '/views'));
+        } else {
+            res.redirect('/login');
+        }
+
+    });
+
+    //Change Password
+    app.get("/change-password", function(req, res) {
+
+        if (req.session.loggedin = true && req.session.username) {
+            res.render("change-password.html", {usernamex: req.session.username});
+            app.use(express.static(__dirname + '/views'));
+        } else {
+            res.redirect('/login');
+        }
+
+    });
+
+    //Change Password
+    app.get("/change-username", function(req, res) {
+
+        if (req.session.loggedin = true && req.session.username) {
+            res.render("change-username.html", {usernamex: req.session.username});
+            app.use(express.static(__dirname + '/views'));
+        } else {
+            res.redirect('/login');
         }
 
     });

@@ -2,7 +2,7 @@
     <html>
         <head>
             <title> Home - Mental Health Web App </title> 
-            <link rel = "stylesheet" href = "theme.css">
+            
             <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
         </head>
         <body>
@@ -13,6 +13,7 @@
 
             <div class = "main">
                 <p> Logged in as: <%=usernamex%> </p>
+                <button onclick = "logoutFunction()"> Logout </button>
                 <div class = "activities">
                     <h1> Activities: </h1>
                     <p> Find activities to reduce stress and help you cope with your feelings. </p>
@@ -24,7 +25,7 @@
                     </div>
 
                     <div class = "option">
-                        <p> Breathing Exercises </p>
+                        <p> Breathing Exercise </p>
                         <button id = "breathingButton" onclick = "breathingFunction()"> Go </button>
                     </div>
 
@@ -77,4 +78,5 @@
             </div>
         </body>
         <script src = "script.js"></script>
+        <link rel = "stylesheet" href = "theme.css">
     </html>

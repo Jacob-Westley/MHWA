@@ -8,6 +8,7 @@
     function mindfulnessFunction() { location.href = "http://localhost:9000/mindfulness"; }
     function meditationLetGoFunction() { location.href = "http://localhost:9000/meditation-let-go"; }
     function meditationBePresentFunction() { location.href = "http://localhost:9000/meditation-be-present"; }
+    function logoutFunction() { location.href = "http://localhost:9000/logout"; }
 
     //External Links
     function projectsemicolonFunction() { location.href = "https://projectsemicolon.com/"; }

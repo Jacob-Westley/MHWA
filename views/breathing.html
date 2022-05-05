@@ -1,14 +1,13 @@
 <!DOCTYPE html>
     <html>
         <head>
-            <title> Breathing Exercises - Mental Health Web App </title> 
-            <link rel = "stylesheet" href = "theme.css">
+            <title> Breathing Exercises - Mental Health Web App </title>            
             <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
         </head>
         <body>
 
             <div class = "header" onclick = "homeFunction()">
-                <p> Mental Health Web Application </p>                
+                <p> Mental Health Web App </p>                
             </div>
 
             <div class = "main">
@@ -18,9 +17,10 @@
                     <h1> Breathing Exercises: </h1>
                     <p> Use breathing exercises to calm down and regain focus. </p>
                     <p> Breathe in for 4 seconds, then breathe out for 4 seconds. </p>
-                    <p> Do this for 2 minutes. </p>                    
-
-                    <button id = "breatheButton" onclick = "breatheFunction()"> Start </button>
+                    <p> Do this for 2 minutes. </p> 
+                    <div class = "functionButton">  
+                        <button id = "breatheButton" onclick = "breatheFunction()"> Start </button>
+                    </div>  
 
                     <div class = "breathingText">
                         <h1 id = "breathingTime"></h1>
@@ -29,7 +29,7 @@
                 </div>
             </div>
         </body>
-
-    <script src = "breathingscript.js"> </script> 
-    <script src = "script.js"> </script>
+        <link rel = "stylesheet" href = "theme.css">
+        <script src = "breathingscript.js"> </script> 
+        <script src = "script.js"> </script>
     </html>
