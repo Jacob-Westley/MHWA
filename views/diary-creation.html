@@ -1,22 +1,25 @@
 <!DOCTYPE html>
     <html>
         <head>
-            <title> Diary - Mental Health Web App </title> 
+            <title> Diary Creation- Mental Health Web App </title> 
             <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
         </head>
         <body>
-            <div class = "header" onclick = "homeFunction()">
-                <p> Mental Health Web App </p>                
-            </div>
+            <ul class = "topnav">
+                <li><a class = "active" href = "http://localhost:9000/home"> Home </a></li>               
+                <li class="right"><a href="http://localhost:9000/account-management"> <%=usernamex%> </a></li>
+            </ul>
             <div class = "main">
                 <div class = "activities">
                     <h1> Diary: </h1>
-                    <p> Record how your feeling here. </p>
+                    <p> Record how you are feeling here. </p>
                     <div class = "login">
                         <form action = "/diary-creation" method = "post">
                             <p>Today I am Feeling: </p>    
                             <input type = "text" name = "diaryentry" placeholder = "Good, bad, sad, Excited...">
                             <div class = "loginbutton">
+                                <!-- <p> What Happened: </p>
+                                <input type = "text" name = "diaryentry" placeholder = "Good, bad, sad, Excited..."> -->
                                 <input type = "submit" value = "Submit">  
                             </div>
                         </form>

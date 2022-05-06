@@ -7,13 +7,18 @@
         </head>
         <body>
 
-            <div class = "header" onclick = "homeFunction()">
+            <!-- <div class = "header" onclick = "homeFunction()">
                 <p> Mental Health Web App </p>                
-            </div>
+            </div> -->
+
+            <ul class = "topnav">
+                <li><a class = "active" href = "http://localhost:9000/home"> Home </a></li>               
+                <li class="right"><a href="http://localhost:9000/account-management"> <%=usernamex%> </a></li>
+            </ul>
 
             <div class = "main">
-                <p> Logged in as: <%=usernamex%> </p>
-                <button onclick = "logoutFunction()"> Logout </button>
+                <!-- <p> Logged in as: <%=usernamex%> </p> -->
+                <!-- <button onclick = "logoutFunction()"> Logout </button> -->
                 <div class = "activities">
                     <h1> Activities: </h1>
                     <p> Find activities to reduce stress and help you cope with your feelings. </p>
@@ -36,7 +41,7 @@
 
                     <div class = "option">
                         <p> Diary </p>
-                        <button id = "diaryButton" onclick = "diaryviewFunction()"> Go </button>
+                        <button id = "diaryButton" onclick = "diarycreationFunction()"> Go </button>
                     </div>
 
                 </div>

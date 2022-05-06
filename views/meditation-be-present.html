@@ -1,18 +1,18 @@
 <!DOCTYPE html>
     <html>
         <head>
-            <title> Meditation - Mental Health Web App </title> 
-            <link rel = "stylesheet" href = "theme.css">
+            <title> Meditation - Mental Health Web App </title>             
             <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
         </head>
         <body>
 
-            <div class = "header" onclick = "homeFunction()">
-                <p> Mental Health Web App </p>                
-            </div>
+            <ul class = "topnav">
+                <li><a class = "active" href = "http://localhost:9000/home"> Home </a></li>               
+                <li class="right"><a href="http://localhost:9000/account-management"> <%=usernamex%> </a></li>
+            </ul>
 
             <div class = "main">
-                <p> Logged in as: <%=usernamex%> </p>
+                <!-- <p> Logged in as: <%=usernamex%> </p> -->
                 <div class = "activities">
                     <h1> Meditation: </h1>
                     <p> Use Meditations to calm down and relax. </p>
@@ -20,6 +20,8 @@
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/ZToicYcHIOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
                 </div>
             </div>
+            
         </body>
         <script src = "script.js"> </script>
+        <link rel = "stylesheet" href = "theme.css">
     </html>

@@ -199,7 +199,7 @@ const port = 9000;
     app.get("/diary-creation", function(req, res) {
 
         if (req.session.loggedin = true && req.session.username) {
-            res.render("diarycreation3.html", {usernamex: req.session.username});
+            res.render("diary-creation.html", {usernamex: req.session.username});
         app.use(express.static(__dirname + '/views'));
         } else {
             res.redirect('/login');
@@ -283,7 +283,32 @@ const port = 9000;
 
     });
 
-    //Change Password
+    // //Diary
+    // app.post("/change-password", function(req, res) {
+
+    //     // let username = req.session.username;
+    //     let newpassword = req.body.newpassword;
+
+    //     if (diaryentry) {
+
+    //         // UPDATE `usersdata` SET `password` = '77' WHERE `usersdata`.`id` = 7;
+
+    //         // mysqlServer.query("INSERT INTO usersdiaries (username, diarytext) VALUES (" + "'" + username + "'" + "," + "'" + diaryentry + "'" + ")", function (err, result) {
+
+    //             mysqlServer.query("UPDATE usersdiaries SET password = " + "'" + newpassword + "'" + "WHERE username = " + "'" + req.session.username + "'" + (username, diarytext) VALUES (" + "'" + username + "'" + "," + "'" + diaryentry + "'" + ")", function (err, result) {
+                
+    //             console.log(username + " created a new diary");
+    //             console.log(diaryentry);
+    //             res.send("Diary Entry Created Succesfully: " + diaryentry);
+    //             // res.send(diaryentry);
+    //             });
+   
+    //     } else {             
+    //         res.send("Unable to chaneg password .");
+    //     }
+    //     });
+
+    //Change Username
     app.get("/change-username", function(req, res) {
 
         if (req.session.loggedin = true && req.session.username) {

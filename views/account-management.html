@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title> Account Management  - Mental Health Web App </title>
+            <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        </head>
+        <body>
+            <ul class = "topnav">
+                <li><a class = "active" href = "http://localhost:9000/home"> Home </a></li>               
+                <li class="right"><a href="http://localhost:9000/account-management"> <%=usernamex%> </a></li>
+            </ul>
+            <div class = "main">
+                <div class = "activities">
+                    <h1> Account Management: </h1>
+                    <p> Use this page to change your credentials or delete your account. </p>
+
+                    <!-- <div class = "option">
+                        <p> Change Username </p>
+                        <button id = "changeusernameButton" onclick = "changeusernameFunction()"> Go </button>                        
+                    </div>
+
+                    <div class = "option">
+                        <p> Change Password </p>
+                        <button id = "changepasswordButton" onclick = "changepasswordFunction()"> Go </button>
+                    </div>
+
+                    <div class = "option">
+                        <p> Delete Account </p>
+                        <button id = "mindfulnessButton" onclick = "deleteaccountFunction()"> Go </button>
+                    </div> -->
+
+                    <div class = "option">
+                        <p> Log Out </p>
+                        <button id = "diaryButton" onclick = "logoutFunction()"> Go </button>
+                    </div>
+                </div>
+            </div>
+        </body>
+        <script src = "script.js"></script>
+        <link rel = "stylesheet" href = "theme.css">
+    </html>
