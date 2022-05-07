@@ -3,8 +3,9 @@
     function aboutFunction() { location.href = "http://localhost:9000/about"; }    
     function breathingFunction() { location.href = "http://localhost:9000/breathing"; }
     function homeFunction() { location.href = "http://localhost:9000/home"; } 
-    function diaryviewFunction() { location.href = "http://localhost:9000/diaryview"; }
-    function diarycreationFunction() { location.href = "http://localhost:9000/diary-creation"; }
+    // function diaryviewFunction() { location.href = "http://localhost:9000/diaryview"; }
+    // function diarycreationFunction() { location.href = "http://localhost:9000/diary-creation"; }
+    function diaryFunction() { location.href = "http://localhost:9000/diary"; }
     function mindfulnessFunction() { location.href = "http://localhost:9000/mindfulness"; }
     function meditationLetGoFunction() { location.href = "http://localhost:9000/meditation-let-go"; }
     function meditationBePresentFunction() { location.href = "http://localhost:9000/meditation-be-present"; }

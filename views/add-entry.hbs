@@ -1,0 +1,17 @@
+<nav>
+  <ol>
+    <li><a href="/"> Home </a></li>
+    <li> / New Entry </li>
+  </ol>
+</nav>
+
+{{#if alert}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  {{alert}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"> Dismiss </button>
+</div>
+{{/if}}
+
+<form method="POST" action="/addentry" novalidate>
+  {{> entry-form}}
+</form>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title> Diary - Mental Health Web App </title>        
+        </head>
+        <body>      
+            <ul class = "topnav">
+                <li><a class = "active" href = "http://localhost:9000/home"> Home </a></li>               
+                <li class="right"><a href="http://localhost:9000/account-management"> Logged in as: {{usernamex}} </a></li>
+            </ul> 
+            <div class = "main">
+                <div class = "activities">
+                    <div class = "table">
+                        {{{body}}}
+                    </div>
+                </div>
+            </div>
+        </body>
+        <script src = "/js/script.js" type="text/javascript"></script>
+        <link href="/css/theme.css" rel="stylesheet" type="text/css">
+    </html>

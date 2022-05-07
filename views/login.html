@@ -2,27 +2,22 @@
     <html>
         <head>
             <title> Home - Mental Health Web App </title> 
-            <link rel = "stylesheet" href = "theme.css">
             <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
         </head>
         <body>
-
             <div class = "header" onclick = "homeFunction()">
                 <p> Mental Health Web App </p>                
             </div>
-
             <div class = "main">
                 <div class = "activities">
                     <h1> Login: </h1>
                     <p> Login to the Mental Health Web App to access helpful activities and advice. </p>
                     <div class = "login">
-                       
                         <form action = "/login" method = "post">
                             <p id = "username"> Username: </p>
                             <input type = "text" name = "username" placeholder = "Username" id = "username" required>
                             <p id = "password"> Pasword: </p>
                             <input type = "password" name = "password" placeholder = "Password" id = "password" required>
-
                             <div class = "loginbutton">
                                 <input type = "submit" value = "Login">
                                 <p> New to the Mental Health Web App? <a href = "http://localhost:9000/signup">Sign Up</a></p>
@@ -31,12 +26,12 @@
                     </div>  
                 </div>
             </div>
-
             <div class = "footer">
                 <div class = "about">                    
                     <button id = "aboutButton" onclick = "aboutFunction()" >About</button>
                 </div>
             </div>
         </body>
-        <script src = "script.js"> </script>
+        <script src = "/js/script.js" type="text/javascript"></script>
+        <link href="/css/theme.css" rel="stylesheet" type="text/css">
     </html>

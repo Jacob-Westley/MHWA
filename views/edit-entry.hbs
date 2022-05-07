@@ -1,0 +1,19 @@
+<nav>
+  <ol>
+    <li><a href="/"> Home </a></li>
+    <li aria-current="page"> / Edit Entry </li>
+  </ol>
+</nav>
+
+{{#if alert}}
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{alert}}
+    <button type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+{{/if}}
+
+{{#each rows}}
+<form  method="POST" action="/editentry/{{this.id}}" novalidate> 
+  {{> entry-form}}
+</form>
+{{/each}}

@@ -1,19 +1,16 @@
 <!DOCTYPE html>
     <html>
         <head>
-            <title> Breathing Exercises - Mental Health Web App </title>            
+            <title> Breathing Exercise - Mental Health Web App </title>            
             <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
         </head>
         <body>
-
-            <div class = "header" onclick = "homeFunction()">
-                <p> Mental Health Web App </p>                
-            </div>
-
-            <div class = "main">
-                <p> Logged in as: <%=usernamex%> </p>
+            <ul class = "topnav">
+                <li><a class = "active" href = "http://localhost:9000/home"> Home </a></li>               
+                <li class="right"><a href="http://localhost:9000/account-management"> Logged in as: <%=usernamex%> </a></li>
+            </ul>
+            <div class = "main">                
                 <div class = "activities">
-
                     <h1> Breathing Exercises: </h1>
                     <p> Use breathing exercises to calm down and regain focus. </p>
                     <p> Breathe in for 4 seconds, then breathe out for 4 seconds. </p>
@@ -21,15 +18,13 @@
                     <div class = "functionButton">  
                         <button id = "breatheButton" onclick = "breatheFunction()"> Start </button>
                     </div>  
-
                     <div class = "breathingText">
                         <h1 id = "breathingTime"></h1>
                     </div>
-
                 </div>
             </div>
         </body>
-        <link rel = "stylesheet" href = "theme.css">
-        <script src = "breathingscript.js"> </script> 
-        <script src = "script.js"> </script>
+        <script src = "/js/script.js" type = "text/javascript" ></script>
+        <script src = "/js/breathingscript.js" type = "text/javascript" ></script>
+        <link href = "/css/theme.css" rel = "stylesheet" type = "text/css">        
     </html>
