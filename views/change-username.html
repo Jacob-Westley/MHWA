@@ -1,7 +1,7 @@
 <!DOCTYPE html>
     <html>
         <head>
-            <title> Change Password - Mental Health Web App </title> 
+            <title> Change Username - Mental Health Web App </title> 
             <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
         </head>
         <body>
@@ -11,12 +11,13 @@
                 <li class="right"><a href="http://localhost:9000/account-management"> Logged in as: <%=usernamex%> </a></li>
             </ul>           
                 <div class = "activities">
-                    <h1> Change Password: </h1>
-                    <p> Enter your new password and click change. </p>
+                    <h1> Change Username: </h1>
+                    <p> Enter your new username and click change. </p>
+                    <p> Current Username: <%=usernamex%> </p>                    
                     <div class = "login">
-                        <form action = "/change-password" method = "post">
-                            <p id = "newpassword"> New Password: </p>
-                            <input type = "password" name = "newpassword" placeholder = "********" id = "newpassword" required>                            
+                        <form action = "/change-username" method = "post">
+                            <p id = "newusername"> New Username: </p>
+                            <input type = "text" name = "newusername" placeholder = "Username" id = "newusername" required>                            
                             <div class = "loginbutton">
                                 <input type = "submit" value = "Change">                               
                             </div>

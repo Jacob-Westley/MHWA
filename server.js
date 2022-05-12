@@ -255,7 +255,7 @@ const port = 9000;
     });
 
     //Delete account
-    app.get("/account-management", function(req, res) {
+    app.get("/delete-account", function(req, res) {
 
         if (req.session.loggedin = true && req.session.username) {
             res.render("delete-account.html", {usernamex: req.session.username});
@@ -265,6 +265,21 @@ const port = 9000;
         }
     });
 
+    app.post("/delete-account", function(req, res) {      
+        let username = req.session.username;
+                mysqlServer.query("DELETE FROM usersdata WHERE username = " + "'" + req.session.username + "'", function (err, result) {
+                console.log(username + " deleted their account");                                
+                });
+
+                mysqlServer.query("DELETE FROM usersdiaries WHERE username = " + "'" + req.session.username + "'", function (err, result) {
+                console.log("All diary entries belonging to " + username + " have been erased.");
+                res.send("Account and all diary entries deleted.");                 
+                req.session.loggedin = false;         
+                console.log(req.session.username + " Logged out"); 
+                req.session.username = ""; 
+                });
+            });
+      
     //Change Password
     app.get("/change-password", function(req, res) {
 
@@ -274,37 +289,46 @@ const port = 9000;
         } else {
             res.redirect('/login');
         }
-
     });
 
-    // app.post("/change-password", function(req, res) {
-    //     let username = req.session.username;
-    //     let newpassword = req.body.newpassword;
-    //     if (diaryentry) {
-            
-    //             mysqlServer.query("UPDATE usersdiaries SET password = " + "'" + newpassword + "'" + "WHERE username = " + "'" + req.session.username + "'" + (username, diarytext) VALUES (" + "'" + username + "'" + "," + "'" + diaryentry + "'" + ")", function (err, result) {
-    //             console.log(username + " created a new diary");
-    //             console.log(diaryentry);
-    //             res.send("Diary Entry Created Succesfully: " + diaryentry);
-    //             // res.send(diaryentry);
-    //             });
-    //     } else {             
-    //         res.send("Unable to chaneg password .");
-    //     }
-    //     });
+    app.post("/change-password", function(req, res) {
+        let username = req.session.username;
+        let newpassword = req.body.newpassword;
+        if (newpassword) {        
+                mysqlServer.query("UPDATE usersdata SET password = " + "'" + newpassword + "'" + "WHERE username = " + "'" + req.session.username + "'", function (err, result) {
+                console.log(username + " updated their password");
+                res.send("password changed");                
+                });
+        } else {             
+            res.send("Unable to change password.");
+        }
+        });
 
-    //Change Username
-    // app.get("/change-username", function(req, res) {
+    // Change Username
+    app.get("/change-username", function(req, res) {
 
-    //     if (req.session.loggedin = true && req.session.username) {
-    //         res.render("change-username.html", {usernamex: req.session.username});
-    //         app.use(express.static(__dirname + '/views'));
-    //     } else {
-    //         res.redirect('/login');
-    //     }
-    // });
+        if (req.session.loggedin = true && req.session.username) {
+            res.render("change-username.html", {usernamex: req.session.username});
+            app.use(express.static(__dirname + '/views'));
+        } else {
+            res.redirect('/login');
+        }
+    });
 
-    //Diary code with HBS
+    app.post("/change-username", function(req, res) {
+        let username = req.session.username;
+        let newusername = req.body.newusername;
+        if (newusername) {            
+                mysqlServer.query("UPDATE usersdata SET username = " + "'" + newusername + "'" + "WHERE username = " + "'" + req.session.username + "'", function (err, result) {
+                console.log(username + " renamed to " + newusername);
+                req.session.username = newusername;
+                res.send("username changed");                
+                });
+        } else {             
+            res.send("Unable to change username.");
+        }
+        });
+
 
     //Diary
     app.get('/diary', function (req, res) {

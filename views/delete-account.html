@@ -1,7 +1,7 @@
 <!DOCTYPE html>
     <html>
         <head>
-            <title> Change Password - Mental Health Web App </title> 
+            <title> Delete Account - Mental Health Web App </title> 
             <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
         </head>
         <body>
@@ -11,14 +11,20 @@
                 <li class="right"><a href="http://localhost:9000/account-management"> Logged in as: <%=usernamex%> </a></li>
             </ul>           
                 <div class = "activities">
-                    <h1> Change Password: </h1>
-                    <p> Enter your new password and click change. </p>
+                    <h1> Delete Account: </h1>
+                                      
                     <div class = "login">
-                        <form action = "/change-password" method = "post">
-                            <p id = "newpassword"> New Password: </p>
-                            <input type = "password" name = "newpassword" placeholder = "********" id = "newpassword" required>                            
+                        <p> Are you sure you wish to delete your account? </p>
+                    <p> Delete <%=usernamex%> ? </p> 
+                    <div class = "invalid">
+                        <p> Warning! - This cannot be undone. </p>
+                    </div>
+                    <p> Click delete to erase your account and all diary entries. </p> 
+                        <form action = "/delete-account" method = "post">
+                            <!-- <p id = "newusername"> New Username: </p>
+                            <input type = "text" name = "newusername" placeholder = "Username" id = "newusername" required>                             -->
                             <div class = "loginbutton">
-                                <input type = "submit" value = "Change">                               
+                                <input type = "submit" value = "Delete">                               
                             </div>
                         </form>
                     </div>  
