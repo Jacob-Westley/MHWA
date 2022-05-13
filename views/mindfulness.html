@@ -11,13 +11,44 @@
                     <li><a class = "active" href = "http://localhost:9000/home"> Home </a></li>               
                     <li class="right"><a href="http://localhost:9000/account-management"> Logged in as: <%=usernamex%> </a></li>
                 </ul>
+
                 <div class = "activities">
-                    <h1> Mindfulness: </h1>
-                    <p> Use Meditations to calm down and relax. </p>
-                    <p> Daily Calm | 10 Minute Mindfulness Meditation | Letting Go </p>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZToicYcHIOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                </div>
+                    <h1> Mindfulness exercises: </h1>
+                    <div class = "login">
+                        <p> If you want to try mindfulness, you don't need any special equipment for the following exercises: </p> <br>
+                        <strong> Mindful Eating </strong>
+                        <p> This involves paying attention to the taste, sight and textures of what you eat. Try this when drinking a cup of tea or coffee for example. You could focus on the temperate, how the liquid feels on your tongue, how sweet it tastes or watch the steam that it gives off. </p> <br>
+                        <strong> Mindful moving, walking or running </strong>
+                        <p> While exercising, try focusing on the feeling of your body moving. If you go for a mindful walk, you might notice the breeze against your skin, the feeling of your feet or hands against different textures on the ground or nearby surfaces, and the different smells around you. </p> <br>
+                        <strong> Body scan </strong>
+                        <p> This is where you move your attention slowly through different parts of your body. Start from the top of your head and move all the way down to the end of your toes. You could focus on feelings of warmth, tension, tingling or relaxation of different parts of your body. </p> <br>
+                        <strong> Mindful colouring and drawing </strong>
+                        <p> Rather than trying to draw something in particular, focus on the colours and the sensation of your pencil against the paper. <a href="https://www.justcolor.net/"> You could use a mindfulness colouring book or download mindfulness colouring images. </a>  </p> <br>
+                        <strong> Mindful meditation </strong>
+                        <p> This involves sitting quietly to focus on your breathing, thoughts, sensations in your body or things you can sense around you. Try to bring your attention back to the present if your mind starts to wander. Many people also find that yoga helps them to concentrate on their breathing and focus on the present moment. For more information on meditation and yoga, see our page on <a href = "https://www.mind.org.uk/information-support/drugs-and-treatments/complementary-and-alternative-therapies/types-of-complementary-and-alternative-therapies/"> types of complementary and alternative therapies. </a> </p> <br>
+                        <strong> Information courtesy of Mind. </strong>
+                        <p> © Mind. This information is published in full at mind.org.uk </p>
+                        <button id = "mindfulnessButton" onclick = "mindMindfulnessFunction()"> Link to original material </button>
+                    </div> 
             </div>
         </body>
         <script src = "/js/script.js" type="text/javascript"></script>
         <link href="/css/theme.css" rel="stylesheet" type="text/css">
+        <style>
+            body {
+                background-image: url("/img/mindfulness.jpg");
+                background-repeat: no-repeat;
+                background-size: 100%;                           
+            }
+
+              /* @media for Responsive design. */
+            @media only screen and (max-width: 700px) {
+            
+            body {
+                background-image: url("/img/mindfulness.jpg");
+                background-repeat: no-repeat;
+                background-size: auto;                
+            }
+            }
+        </style>
     </html>

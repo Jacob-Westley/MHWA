@@ -19,6 +19,7 @@
     function samaritansFunction() { location.href = "https://www.samaritans.org/"; }
     function nhsFunction() { location.href = "https://www.nhs.uk/mental-health/"; }   
     function mindFunction() { location.href = "https://www.mind.org.uk/"; }
-    function trevorprojectFunction() { location.href = "https://www.thetrevorproject.org/" };
+    function trevorprojectFunction() { location.href = "https://www.thetrevorproject.org/"; }
+    function mindMindfulnessFunction() { location.href = "https://www.mind.org.uk/information-support/drugs-and-treatments/mindfulness/mindfulness-exercises-tips/"; }
 
  
