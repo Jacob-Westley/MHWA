@@ -1,27 +1,22 @@
 <!DOCTYPE html>
     <html>
         <head>
-            <title> Change Username - Mental Health Web App </title> 
+            <title> Deleted Account - Mental Health Web App </title> 
             <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
         </head>
         <body>
             <div class = "main">
-            <ul class = "topnav">
+            <!-- <ul class = "topnav">
                 <li><a class = "active" href = "http://localhost:9000/home"> Home </a></li>               
                 <li class="right"><a href="http://localhost:9000/account-management"> Logged in as: <%=usernamex%> </a></li>
-            </ul>           
+            </ul>            -->
                 <div class = "activities">
-                    <h1> Change Username: </h1>
-                    <p> Enter your new username and click change. </p>
-                    <p> Current Username: <%=usernamex%> </p>                    
+                    <h1> Delete Account: </h1>
+                                      
                     <div class = "login">
-                        <form action = "/change-username" method = "post">
-                            <p id = "newusername"> New Username: </p>
-                            <input type = "text" name = "newusername" placeholder = "Username" id = "newusername" required>                            
-                            <div class = "loginbutton">
-                                <input type = "submit" value = "Change">                               
-                            </div>
-                        </form>
+                        <p> All account data and diary entries belonging to <%=usernamex%> have been erased. </p>
+                        <p> We're sorry to see you go. </p> <br>
+                        <p> You may now close this browser window. </p>                        
                     </div>  
                 </div>
             </div>           

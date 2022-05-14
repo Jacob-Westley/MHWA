@@ -273,12 +273,20 @@ const port = 9000;
 
                 mysqlServer.query("DELETE FROM usersdiaries WHERE username = " + "'" + req.session.username + "'", function (err, result) {
                 console.log("All diary entries belonging to " + username + " have been erased.");
-                res.send("Account and all diary entries deleted.");                 
+                // res.send("Account and all diary entries deleted.");
+                res.redirect("/deleted-account");
                 req.session.loggedin = false;         
                 console.log(req.session.username + " Logged out"); 
                 req.session.username = ""; 
                 });
             });
+
+    //Deleted account
+    app.get("/deleted-account", function(req, res) {
+
+            res.render("deleted-account.html", {usernamex: req.session.username});
+            app.use(express.static(__dirname + '/views'));
+    });
       
     //Change Password
     app.get("/change-password", function(req, res) {
@@ -297,12 +305,23 @@ const port = 9000;
         if (newpassword) {        
                 mysqlServer.query("UPDATE usersdata SET password = " + "'" + newpassword + "'" + "WHERE username = " + "'" + req.session.username + "'", function (err, result) {
                 console.log(username + " updated their password");
-                res.send("password changed");                
+                res.redirect('/changed-password');              
                 });
         } else {             
             res.send("Unable to change password.");
         }
         });
+
+    //Changed Password
+    app.get("/changed-password", function(req, res) {
+
+        if (req.session.loggedin = true && req.session.username) {
+            res.render("changed-password.html", {usernamex: req.session.username});
+            app.use(express.static(__dirname + '/views'));
+        } else {
+            res.redirect('/login');
+        }
+    });
 
     // Change Username
     app.get("/change-username", function(req, res) {
@@ -322,12 +341,23 @@ const port = 9000;
                 mysqlServer.query("UPDATE usersdata SET username = " + "'" + newusername + "'" + "WHERE username = " + "'" + req.session.username + "'", function (err, result) {
                 console.log(username + " renamed to " + newusername);
                 req.session.username = newusername;
-                res.send("username changed");                
+                res.redirect('/changed-username');                
                 });
         } else {             
             res.send("Unable to change username.");
         }
         });
+
+    // Changed Username
+    app.get("/changed-username", function(req, res) {
+
+        if (req.session.loggedin = true && req.session.username) {
+            res.render("changed-username.html", {usernamex: req.session.username});
+            app.use(express.static(__dirname + '/views'));
+        } else {
+            res.redirect('/login');
+        }
+    });
 
 
     //Diary
@@ -348,7 +378,7 @@ const port = 9000;
     app.get('/addentry', function (req, res) {
 
         if (req.session.loggedin = true && req.session.username) {
-            res.render('add-entry.hbs');        
+            res.render('add-entry.hbs', {usernamex: req.session.username});        
         } else {
           res.redirect('/login');
         }
@@ -368,7 +398,7 @@ const port = 9000;
 
         if (req.session.loggedin = true && req.session.username) {
           mysqlServer.query('SELECT * FROM usersdiaries WHERE id = ?', [req.params.id], (err, rows) => {
-              res.render('edit-entry.hbs', { rows });
+              res.render('edit-entry.hbs', { rows, usernamex: req.session.username });
           });
         } else {
           res.redirect('/login');
@@ -390,7 +420,7 @@ const port = 9000;
         
         if (req.session.loggedin = true && req.session.username) {
             mysqlServer.query('SELECT * FROM usersdiaries WHERE id = ?', [req.params.id], (err, rows) => {         
-                res.render('view-entry.hbs', { rows });
+                res.render('view-entry.hbs', { rows, usernamex: req.session.username });
             });
         } else {
             res.redirect('/login');

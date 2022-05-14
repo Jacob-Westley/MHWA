@@ -12,16 +12,10 @@
             </ul>           
                 <div class = "activities">
                     <h1> Change Username: </h1>
-                    <p> Enter your new username and click change. </p>
-                    <p> Current Username: <%=usernamex%> </p>                    
+                    <p> Enter your new username and click change. </p>                                    
                     <div class = "login">
-                        <form action = "/change-username" method = "post">
-                            <p id = "newusername"> New Username: </p>
-                            <input type = "text" name = "newusername" placeholder = "Username" id = "newusername" required>                            
-                            <div class = "loginbutton">
-                                <input type = "submit" value = "Change">                               
-                            </div>
-                        </form>
+                        <p> Username succesfully changed to <%=usernamex%></p>
+                        <a class = "active" href = "http://localhost:9000/home"> Home </a>
                     </div>  
                 </div>
             </div>           
